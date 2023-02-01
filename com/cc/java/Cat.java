@@ -12,25 +12,14 @@ public Cat(String name, String furColor, int age) {
     this.age = age;
   }
 
-public String getName() {
-  if (checkPermission()) {
-    return name;
-  } else {
-    return "Sorry, no permission!";
-  }
-}
-
-public void setName(String name) {
-  this.name = name;
-}
-
-public String getFurColor() {
-  return furColor;
-}
-
-public void setFurColor(String furColor) {
-  if (checkPermission()) {
-    this.furColor = furColor;
+public String getStringAttributes(String op) {
+  switch (op) {
+    case "#name":
+      return name;
+    case "#color":
+      return furColor;
+    default:
+      return "ERROR!";
   }
 }
 
@@ -38,12 +27,6 @@ public int getAge() {
   return age;
 }
 
-public void setAge(int age) {
-  this.age = age;
-}
 
-private boolean checkPermission() {
-  return false;
-}
     
 }
