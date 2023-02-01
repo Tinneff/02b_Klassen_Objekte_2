@@ -10,6 +10,10 @@ public class App {
         output(cat.getStringAttributes("#color"));
 
         output(cat.getAge());  
+        output(cat.getAge());  
+        output(cat.getAge());  
+        output(cat.getAge());  
+
 
         output("-------------------------");
 
